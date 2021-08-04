@@ -13,17 +13,19 @@ import javax.inject.Inject
 class NewsRemoteDataSource @Inject constructor(
     private val webService: NewsApiWebService
 ) {
-    suspend fun getAllNews(): Resource<NewsDomain>{
+    suspend fun getAllNews(): Resource<NewsDomain> {
         return safeApiCall(
-            call = { fetchNews(webService) },
-            "Unable to Fetch News"
+            call = {
+                fetchNews(webService)
+            },
+            "RETROFIT_EXCEPTION"
         )
     }
 }
 
 private suspend fun fetchNews(webService: NewsApiWebService): Resource<NewsDomain> {
-    val response =  webService.getNews().awaitResponse()
-    if (response.isSuccessful) {
+    val response = webService.getNews().awaitResponse()
+    if (response.isSuccessful && response.body() != null) {
         val newsList = response.body()
     }
 
@@ -32,6 +34,6 @@ private suspend fun fetchNews(webService: NewsApiWebService): Resource<NewsDomai
 }
 
 interface NewsApiWebService {
-    @GET("top-headlines?country=us")
+    @GET("top-headlines?country=us&category=business&apiKey=455e3b21f82f42aabfb438d4204d6ceb")
     suspend fun getNews(): Call<NewsList>
 }

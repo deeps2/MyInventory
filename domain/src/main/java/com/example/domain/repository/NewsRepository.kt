@@ -1,9 +1,9 @@
 package com.example.domain.repository
 
 import com.example.data.model.Resource
-import com.example.domain.model.News
+import com.example.domain.model.NewsDomain
 
 
 interface NewsRepository {
-    suspend fun getNews(): Resource<News>
+    suspend fun getNews(): Resource<NewsDomain>
 }

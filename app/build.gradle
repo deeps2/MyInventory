@@ -42,6 +42,7 @@ android {
 
 dependencies {
     implementation project(path: ':data')
+    implementation project(path: ':domain')
     //testing - junit, mockito, espresso
     testImplementation "junit:junit:$JUNIT"
     testImplementation "org.mockito:mockito-core:$MOCKITO"

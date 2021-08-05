@@ -1,6 +1,6 @@
 package com.example.data.utils
 
-import com.example.data.model.Resource
+import com.example.domain.model.Resource
 import java.io.IOException
 
 
@@ -11,7 +11,7 @@ suspend fun <T : Any> safeApiCall(
     return try {
         call()
     } catch (throwable: Throwable) {
-
+        //error in making retrofit call or parsing exception
         /*
         when (throwable) {
             is IOException -> Resource.Failure

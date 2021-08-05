@@ -1,4 +1,4 @@
-package com.example.myapp.domain.usecase
+package com.example.domain.usecase
 
 
 class GetDaySummaryUseCase {

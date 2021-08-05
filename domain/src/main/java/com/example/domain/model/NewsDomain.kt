@@ -1,5 +1,8 @@
 package com.example.domain.model
 
 
-class NewsDomain {
-}
+data class NewsDomain(
+    val title: String,
+    val description: String,
+    val imageUrl: String
+)

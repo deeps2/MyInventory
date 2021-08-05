@@ -28,6 +28,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.example.myinventory.presentation.home.HomeActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyInventory.NoActionBar" />
+
     </application>
 
 </manifest>

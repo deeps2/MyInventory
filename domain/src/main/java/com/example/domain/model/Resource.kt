@@ -1,4 +1,4 @@
-package com.example.data.model
+package com.example.domain.model
 
 sealed class Resource<out T> {
     class Loading<out T> : Resource<T>()

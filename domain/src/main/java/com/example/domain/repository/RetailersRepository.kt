@@ -1,4 +1,4 @@
-package com.example.myapp.domain.repository
+package com.example.domain.repository
 
 
 interface RetailersRepository {

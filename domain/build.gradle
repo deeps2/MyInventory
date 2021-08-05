@@ -1,10 +1,21 @@
 plugins {
     id 'java-library'
     id 'kotlin'
-    id 'kotlin-kapt'
+    //id 'kotlin-kapt'
+    //id 'dagger.hilt.android.plugin'  hilt gradle plugin can't be applied to android project
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    //hilt
+    //implementation "com.google.dagger:hilt-android:$HILT"
+    //kapt "com.google.dagger:hilt-android-compiler:$HILT"
+
+    implementation "javax.inject:javax.inject:1"
+
+    //compileOnly "javax.annotation:jsr250-api:$javax_annotation_version"
 }

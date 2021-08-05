@@ -1,20 +1,18 @@
 package com.example.data.model
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
+//@Parcelize
 data class News(
     @SerializedName("title")
-    val title: String = "",
+    val title: String? = "",
 
     @SerializedName("description")
-    val description: String = "",
+    val description: String? = "",
 
     @SerializedName("urlToImage")
-    val imageUrl: String = "",
-) : Parcelable
+    val imageUrl: String? = ""               //todo -- warning try to do it with backing field or backing property. Gson is breaking kotlin type safety
+) //: Parcelable
 
 data class NewsList(
     @SerializedName("status")

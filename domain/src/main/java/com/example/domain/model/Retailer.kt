@@ -1,4 +1,4 @@
-package com.example.myapp.domain.model
+package com.example.domain.model
 
 
 class Retailer {

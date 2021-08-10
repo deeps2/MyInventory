@@ -1,22 +1,28 @@
 package com.example.myinventory.presentation.home
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.data.local.sharedpref.SharedPreferenceManager
 import com.example.domain.model.Resource
 import com.example.myinventory.databinding.ActivityMainBinding
 import com.example.myinventory.presentation.base.BaseActivity
+import com.example.myinventory.presentation.utils.DialogUtils
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class HomeActivity : BaseActivity() {
+class HomeActivity : BaseActivity(), DialogInterface.OnClickListener, DialogInterface.OnCancelListener, DialogInterface.OnDismissListener {
     private lateinit var bd: ActivityMainBinding
 
     @Inject
     lateinit var viewModel: HomeViewModel
+
+    @Inject
+    lateinit var sharedPrefMgr: SharedPreferenceManager
 
     lateinit var adapter: NewsAdapter
 
@@ -54,6 +60,26 @@ class HomeActivity : BaseActivity() {
                 }
             }
         })
+
+        //for testing purpose
+        sharedPrefMgr.getUserId()
+
+        DialogUtils.showDialog(context = this, title = "hello", clickListener = this, cancelListener = this, dismissListener = this)
+    }
+
+    override fun onClick(p0: DialogInterface?, p1: Int) {
+        //TODO("Not yet implemented")
+        return
+    }
+
+    override fun onCancel(p0: DialogInterface?) {
+        //TODO("Not yet implemented")
+        return
+    }
+
+    override fun onDismiss(p0: DialogInterface?) {
+        //TODO("Not yet implemented")
+        return
     }
 
     private fun showOnlyLoader() {

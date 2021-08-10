@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 30
 
     defaultConfig {
         applicationId "com.example.inventory"
         minSdk 21
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -87,6 +87,9 @@ dependencies {
 
     //coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES"
+
+    //datastore
+    implementation "androidx.datastore:datastore-preferences:$DATASTORE"
 
     //room
     implementation "androidx.room:room-runtime:$ROOM"

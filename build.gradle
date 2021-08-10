@@ -29,6 +29,8 @@ buildscript {
 
         COROUTINES = '1.4.2'
 
+        DATASTORE = '1.0.0'
+
         ROOM = '2.3.0'
     }
 

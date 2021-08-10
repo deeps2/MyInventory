@@ -80,6 +80,9 @@ dependencies {
     //coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES"
 
+    //datastore
+    implementation "androidx.datastore:datastore-preferences:$DATASTORE"
+
     //room
     implementation "androidx.room:room-runtime:$ROOM"
     annotationProcessor "androidx.room:room-compiler:$ROOM"

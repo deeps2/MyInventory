@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyInventory" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.MyInventory" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/ceat_blue_light</item>
         <item name="colorPrimaryVariant">@color/ceat_blue_dark</item>
@@ -22,4 +22,16 @@
     <style name="Theme.MyInventory.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MyInventory.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.AutoCompleteTextViewLight" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+    <style name="Widget.DropDownItemLight" parent="@android:style/Widget.DropDownItem">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+
+    <style name="Theme.Light.NoTitleBar.Workaround" parent="android:style/Theme.Light.NoTitleBar">
+        <item name="android:dropDownItemStyle">@style/Widget.DropDownItemLight</item>
+        <item name="android:autoCompleteTextViewStyle">@style/Widget.AutoCompleteTextViewLight</item>
+    </style>
 </resources>

@@ -48,4 +48,12 @@ class SharedPreferenceManager @Inject constructor(private val preference: Shared
         return null
     }
 
+    private fun removeKey(key: String) {
+        preference.edit().remove(key).apply()
+    }
+
+    private fun clearAllPreference(key: String) {
+        preference.edit().clear().apply()
+    }
+
 }
